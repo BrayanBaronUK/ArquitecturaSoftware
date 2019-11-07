@@ -6,6 +6,7 @@
 package proyecto1;
 
 import Excepciones.materiaNoExisteException;
+import FachadaModulos.FachadaModulos;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -23,7 +24,9 @@ import static proyecto1.Registro.PROMEDIO;
  */
 public class FXMLDocumentController implements Initializable {
 
-    Registro registro = new Registro();
+   //Registro registro = new Registro();
+    FachadaModulos fregistro = new FachadaModulos();
+    
 
     @FXML
     private TextField Curso;
@@ -75,7 +78,8 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void AgregarCurso(ActionEvent event) {
-        registro.crearMateria(Curso.getText());
+        fregistro.fachadaregistro.crearMateria(Curso.getText());
+       // registro.crearMateria(Curso.getText());
         AreaCursos.setText(AreaCursos.getText() + "\n" + Curso.getText());
         Curso.clear();
     }
@@ -83,7 +87,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void AgregarEstudiante(ActionEvent event) {
         try {
-            registro.crearEstudiante(MateriaEstudiante.getText(), NombreAgregar.getText());
+            fregistro.fachadaregistro.crearEstudiante(MateriaEstudiante.getText(), NombreAgregar.getText());
         } catch (materiaNoExisteException ex) {
             JOptionPane.showMessageDialog(null, "La materia" + ex.getMessage() + " no existe");
         }
@@ -95,7 +99,7 @@ public class FXMLDocumentController implements Initializable {
     private void AgregarElemento(ActionEvent event) {
         double porcentaje = Integer.parseInt(Porcentaje.getText());
         try {
-            registro.agregarElemento(NombreElemento.getText(), MateriaElemento.getText(), porcentaje);
+            fregistro.fachadaregistro.agregarElemento(NombreElemento.getText(), MateriaElemento.getText(), porcentaje);
         } catch (materiaNoExisteException ex) {
             JOptionPane.showMessageDialog(null, "La materia" + ex.getMessage() + " no existe");
         }
@@ -119,7 +123,7 @@ public class FXMLDocumentController implements Initializable {
     private void NotaFinal(ActionEvent event) {
 
         try {
-            registro.DarNotaFinal(NombreNota.getText(), MateriaNota.getText());
+            fregistro.fachadaregistro.DarNotaFinal(NombreNota.getText(), MateriaNota.getText());
         } catch (materiaNoExisteException ex) {
             JOptionPane.showMessageDialog(null, "La materia " + ex.getMessage() + " no existe");
         }
@@ -130,7 +134,7 @@ public class FXMLDocumentController implements Initializable {
     private void EvaluarEstudiante(ActionEvent event) {
         double nota = Integer.parseInt(Nota.getText());
         try {
-            registro.evaluarEstudiante(ElementoCaificar.getText(), MateriaCalificar.getText(), EstudianteCalificar.getText(), nota);
+            fregistro.fachadaregistro.evaluarEstudiante(ElementoCaificar.getText(), MateriaCalificar.getText(), EstudianteCalificar.getText(), nota);
         } catch (materiaNoExisteException ex) {
             JOptionPane.showMessageDialog(null, "La materia " + ex.getMessage() + " no existe.");
         }
@@ -143,9 +147,9 @@ public class FXMLDocumentController implements Initializable {
     void mostrarEstudiantes(String MateriaLista) {
         int contador = 0;
 
-        for (int i = 0; i < registro.materias.size(); i++) {
-            if (MateriaLista.equals(registro.materias.get(i).nombre)) {
-                darEstudiantes(registro.materias.get(i));
+        for (int i = 0; i < fregistro.fachadaregistro.materias.size(); i++) {
+            if (MateriaLista.equals(fregistro.fachadaregistro.materias.get(i).nombre)) {
+                darEstudiantes(fregistro.fachadaregistro.materias.get(i));
                 contador++;
             }
         }
@@ -163,7 +167,7 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void InformacionTotal(ActionEvent event) {
-        registro.DarInformacionFinal(MateriaPromedio.getText());
+        fregistro.fachadaregistro.DarInformacionFinal(MateriaPromedio.getText());
         Promedio.setText("" + PROMEDIO);
     }
 }

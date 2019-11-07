@@ -56,7 +56,7 @@ public class Registro {
 
     }
 
-    void agregarElemento(String NombreElemento, String MateriaElemento, double Porcentaje) throws materiaNoExisteException {
+   public void agregarElemento(String NombreElemento, String MateriaElemento, double Porcentaje) throws materiaNoExisteException {
         int contador = 0;
         for (int i = 0; i < materias.size(); i++) {
             if (MateriaElemento.equals(materias.get(i).nombre)) {
@@ -73,7 +73,7 @@ public class Registro {
 
     }
 
-    void evaluarEstudiante(String ElementoCaificar, String MateriaCalificar, String EstudianteCalificar, double nota) throws materiaNoExisteException {
+   public void evaluarEstudiante(String ElementoCaificar, String MateriaCalificar, String EstudianteCalificar, double nota) throws materiaNoExisteException {
         int contador1 = 0;
         double nota2 = 50;
 
@@ -144,7 +144,7 @@ public class Registro {
         }
     }
 
-    void DarNotaFinal(String NombreNota, String MateriaNota) throws materiaNoExisteException {
+  public  void DarNotaFinal(String NombreNota, String MateriaNota) throws materiaNoExisteException {
         int contador = 0;
         for (int i = 0; i < materias.size(); i++) {
             if (MateriaNota.equals(materias.get(i).nombre)) {
@@ -168,7 +168,7 @@ public class Registro {
 
     }
 
-    void DarInformacionFinal(String MateriaPromedio) {
+ public   void DarInformacionFinal(String MateriaPromedio) {
         int contador = 0;
 
         for (int i = 0; i < materias.size(); i++) {
