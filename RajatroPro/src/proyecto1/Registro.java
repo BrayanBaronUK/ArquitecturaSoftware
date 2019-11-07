@@ -25,10 +25,10 @@ public class Registro {
     Materia materia;
     Criterio criterio;
 
-    public void crearMateria(String Curso) {
-        materia = new Materia(Curso);
-        materias.add(materia);
-    }
+//    public void crearMateria(String Curso) {
+//        materia = new Materia(Curso);
+//        materias.add(materia);
+//    }
 
     public void crearEstudiante(String MateriaEstudiante, String NombreAgregar) throws materiaNoExisteException {
         int contador = 0;
