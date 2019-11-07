@@ -18,7 +18,7 @@ import static proyecto1.Registro.PROMEDIO;
 
 /**
  *
- * @author Olaya
+ * @author Brayan
  */
 public class FXMLDocumentController implements Initializable {
 

@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 
 /**
  *
- * @author Olaya
+ * @author Brayan
  */
 public class Proyecto1 extends Application {
 

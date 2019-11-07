@@ -7,7 +7,7 @@ package proyecto1;
 
 /**
  *
- * @author Olaya
+ * @author Brayan
  */
 public class criterioNoExisteException extends Exception {
 

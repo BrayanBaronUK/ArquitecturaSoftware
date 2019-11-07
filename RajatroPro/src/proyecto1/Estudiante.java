@@ -9,7 +9,7 @@ import java.util.ArrayList;
 
 /**
  *
- * @author Olaya
+ * @author Brayan
  */
 public class Estudiante {
 

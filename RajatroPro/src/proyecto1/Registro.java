@@ -11,7 +11,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Olaya
+ * @author Brayan
  */
 public class Registro {
 
