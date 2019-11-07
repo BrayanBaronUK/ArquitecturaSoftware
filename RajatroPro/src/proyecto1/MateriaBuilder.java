@@ -17,11 +17,11 @@ public abstract class MateriaBuilder {
         return materia;
     }
 
-    public void setMateria(Materia materia) {
-        this.materia = materia;
+    public void crearNuevaMateria() {
+         materia = new Materia();
     }
     
-    
+    public abstract void nombre();
     public abstract void porcentajeMateria();
     public abstract void listaEstudiantes();
     public abstract void listaCriterios();

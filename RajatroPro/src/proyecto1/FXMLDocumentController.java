@@ -5,6 +5,7 @@
  */
 package proyecto1;
 
+import Excepciones.materiaNoExisteException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;

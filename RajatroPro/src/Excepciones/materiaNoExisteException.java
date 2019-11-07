@@ -3,23 +3,23 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package proyecto1;
+package Excepciones;
 
 /**
  *
  * @author Brayan
  */
-public class criterioNoExisteException extends Exception {
+public class materiaNoExisteException extends Exception {
 
-    String nombreCriterio;
+    String nombreMateria;
 
-    public criterioNoExisteException(String nombreCriterio) {
-        this.nombreCriterio = nombreCriterio;
+    public materiaNoExisteException(String nombreMateria) {
+        this.nombreMateria = nombreMateria;
 
     }
 
     @Override
     public String getMessage() {
-        return " " + nombreCriterio;
+        return " " + nombreMateria;
     }
 }

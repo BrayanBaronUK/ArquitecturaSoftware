@@ -3,22 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package proyecto1;
+package Excepciones;
 
 /**
  *
  * @author Brayan
  */
-public class sobrepasoPorcentajeException extends Exception {
+public class estudianteNoExisteException extends Exception {
 
-    double porcentaje;
+    String nombreEstudiante;
 
-    public sobrepasoPorcentajeException(double porcentaje) {
-        this.porcentaje = porcentaje;
+    public estudianteNoExisteException(String nombreEstudiante) {
+        this.nombreEstudiante = nombreEstudiante;
     }
 
     @Override
     public String getMessage() {
-        return "" + porcentaje;
+        return "" + nombreEstudiante;
     }
 }

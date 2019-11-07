@@ -10,5 +10,30 @@ package proyecto1;
  * @author 10 Spring Creators
  */
 public class crearMateria {
+    private MateriaBuilder materiaBuilder;
+    
+    public crearMateria(){
+    }
+
+    public Materia getMateria() {
+        return materiaBuilder.getMateria();
+    }
+
+    public void setMateriaBuilder(MateriaBuilder mb) {
+        this.materiaBuilder = mb;
+    }
+    
+    public void ConstruirMateria(){
+        
+        materiaBuilder.crearNuevaMateria();
+        materiaBuilder.porcentajeMateria();
+        materiaBuilder.listaCriterios();
+        materiaBuilder.listaEstudiantes();
+        materiaBuilder.nombre();
+        
+        
+        
+    
+    }
     
 }

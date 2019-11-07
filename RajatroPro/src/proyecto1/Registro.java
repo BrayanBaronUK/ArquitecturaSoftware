@@ -5,6 +5,12 @@
  */
 package proyecto1;
 
+import Excepciones.materiaNoExisteException;
+import Excepciones.estudianteNoExisteException;
+import Excepciones.criterioNoExisteException;
+import BuilderConcreto.MateriaRazonamiento;
+import BuilderConcreto.MateriaLenguaje;
+import BuilderConcreto.MateriaHistoria;
 import java.util.ArrayList;
 import javafx.scene.control.TextField;
 import javax.swing.JOptionPane;
@@ -24,11 +30,14 @@ public class Registro {
     Estudiante estudiante;
     Materia materia;
     Criterio criterio;
+    crearMateria nuevaMateria = new crearMateria();
 
-//    public void crearMateria(String Curso) {
-//        materia = new Materia(Curso);
-//        materias.add(materia);
-//    }
+    
+
+    public void crearMateria(String curso) {
+        materia = new Materia();
+        materias.add(materia);
+    }
 
     public void crearEstudiante(String MateriaEstudiante, String NombreAgregar) throws materiaNoExisteException {
         int contador = 0;
