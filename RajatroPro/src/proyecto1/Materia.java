@@ -14,16 +14,13 @@ import java.util.ArrayList;
 public class Materia {
 
     double totalPorcentaje;
-    String nombre;
+    //String nombre;
     ArrayList<Estudiante> listaEstudiantes = new ArrayList<>();
     ArrayList<Criterio> listaCriterios = new ArrayList<>();
+    
 
     public void setTotalPorcentaje(double totalPorcentaje) {
         this.totalPorcentaje = totalPorcentaje;
-    }
-
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
     }
 
     public void setListaEstudiantes(ArrayList<Estudiante> listaEstudiantes) {
@@ -33,9 +30,6 @@ public class Materia {
     public void setListaCriterios(ArrayList<Criterio> listaCriterios) {
         this.listaCriterios = listaCriterios;
     }
-
-   
-
     
 
 }

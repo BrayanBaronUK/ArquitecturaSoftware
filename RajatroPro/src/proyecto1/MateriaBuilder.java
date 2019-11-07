@@ -21,7 +21,7 @@ public abstract class MateriaBuilder {
         this.materia = materia;
     }
     
-    public abstract void nombreMateria();
+    
     public abstract void porcentajeMateria();
     public abstract void listaEstudiantes();
     public abstract void listaCriterios();
