@@ -18,7 +18,7 @@ public class MateriaRazonamiento extends MateriaBuilder{
             
      @Override
     public void nombre() {
-         System.out.println("matematicas");
+          materia.toString();
     }
     
 

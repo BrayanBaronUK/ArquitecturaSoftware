@@ -31,7 +31,7 @@ public class MateriaHistoria extends MateriaBuilder{
 
     @Override
     public void nombre() {
-        System.out.println("sociales");
+         materia.toString();
     }
     
 }
