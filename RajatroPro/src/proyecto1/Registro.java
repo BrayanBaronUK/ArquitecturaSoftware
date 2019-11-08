@@ -84,10 +84,11 @@ public class Registro {
    public void evaluarEstudiante(String ElementoCaificar, String MateriaCalificar, String EstudianteCalificar, double nota) throws materiaNoExisteException {
         int contador1 = 0;
         double nota2 = 50;
-
+        int guardarPos = 0;
         for (int i = 0; i < materias.size(); i++) {
             if (MateriaCalificar.equals(materias.get(i).nombre)) {
                 contador1++;
+                guardarPos = i;
                 try {
                     bucarEstudiante(materias.get(i), EstudianteCalificar);
                 } catch (estudianteNoExisteException ex) {
@@ -109,19 +110,19 @@ public class Registro {
         if (contador1 > 0 && contador2 > 0 && contador3 > 0) {
             double notaCalculada = 0;
             double notaComparativa = 0;
-            for (int i = 0; i < materias.size(); i++) {
-                if (ElementoCaificar.equals(materias.get(i).listaCriterios.get(i).nombre)) {
-                    notaCalculada = (nota * (materias.get(i).listaCriterios.get(i).porcentaje / 100));
-                    notaComparativa = (nota2 * (materias.get(i).listaCriterios.get(i).porcentaje / 100));
+            for (int i = 0; i < materias.get(guardarPos).listaCriterios.size(); i++) {
+                if (ElementoCaificar.equals(materias.get(guardarPos).listaCriterios.get(i).nombre)) {
+                    notaCalculada = (nota * (materias.get(guardarPos).listaCriterios.get(i).porcentaje / 100));
+                    notaComparativa = (nota2 * (materias.get(guardarPos).listaCriterios.get(i).porcentaje / 100));
                 }
             }
 
-            for (int i = 0; i < materias.size(); i++) {
-                if (EstudianteCalificar.equals(materias.get(i).listaEstudiantes.get(i).nombre)) {
+            for (int i = 0; i < materias.get(guardarPos).listaEstudiantes.size(); i++) {
+                if (EstudianteCalificar.equals(materias.get(guardarPos).listaEstudiantes.get(i).nombre)) {
                     Nota notaAsignar = new Nota(ElementoCaificar, notaCalculada);
                     notaIdeal NotaIdeal = new notaIdeal(notaComparativa);
-                    materias.get(i).listaEstudiantes.get(i).notas.add(notaAsignar);
-                    materias.get(i).listaEstudiantes.get(i).notasIdealea.add(NotaIdeal);
+                    materias.get(guardarPos).listaEstudiantes.get(i).notas.add(notaAsignar);
+                    materias.get(guardarPos).listaEstudiantes.get(i).notasIdealea.add(NotaIdeal);
                 }
             }
 
