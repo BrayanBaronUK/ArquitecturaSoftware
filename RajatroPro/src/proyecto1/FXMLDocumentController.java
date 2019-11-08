@@ -93,6 +93,7 @@ public class FXMLDocumentController implements Initializable {
             }
             case "Sociales":{
                 fregistro.fachadaregistro.crearMateria(new MateriaHistoria(), Curso.getText().trim());
+                break;
             }
             default:{
                 System.out.println("fallo");

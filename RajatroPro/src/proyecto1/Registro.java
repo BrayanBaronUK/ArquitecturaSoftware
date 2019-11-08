@@ -58,7 +58,11 @@ public class Registro {
         }
         
     }
+    
 
+    
+    
+    
    public void agregarElemento(String NombreElemento, String MateriaElemento, double Porcentaje) throws materiaNoExisteException {
         int contador = 0;
         for (int i = 0; i < materias.size(); i++) {
@@ -68,7 +72,8 @@ public class Registro {
         }
         if (contador > 0) {
             criterio = new Criterio(NombreElemento, Porcentaje);
-            materia.listaCriterios.add(criterio);
+            //materia.listaCriterios.add(criterio);
+            materias.get(contador -1).listaCriterios.add(criterio);
         }
         if (contador == 0) {
             throw new materiaNoExisteException(MateriaElemento);
@@ -104,19 +109,19 @@ public class Registro {
         if (contador1 > 0 && contador2 > 0 && contador3 > 0) {
             double notaCalculada = 0;
             double notaComparativa = 0;
-            for (int i = 0; i < materia.listaCriterios.size(); i++) {
-                if (ElementoCaificar.equals(materia.listaCriterios.get(i).nombre)) {
-                    notaCalculada = (nota * (materia.listaCriterios.get(i).porcentaje / 100));
-                    notaComparativa = (nota2 * (materia.listaCriterios.get(i).porcentaje / 100));
+            for (int i = 0; i < materias.size(); i++) {
+                if (ElementoCaificar.equals(materias.get(i).listaCriterios.get(i).nombre)) {
+                    notaCalculada = (nota * (materias.get(i).listaCriterios.get(i).porcentaje / 100));
+                    notaComparativa = (nota2 * (materias.get(i).listaCriterios.get(i).porcentaje / 100));
                 }
             }
 
-            for (int i = 0; i < materia.listaEstudiantes.size(); i++) {
-                if (EstudianteCalificar.equals(materia.listaEstudiantes.get(i).nombre)) {
+            for (int i = 0; i < materias.size(); i++) {
+                if (EstudianteCalificar.equals(materias.get(i).listaEstudiantes.get(i).nombre)) {
                     Nota notaAsignar = new Nota(ElementoCaificar, notaCalculada);
                     notaIdeal NotaIdeal = new notaIdeal(notaComparativa);
-                    materia.listaEstudiantes.get(i).notas.add(notaAsignar);
-                    materia.listaEstudiantes.get(i).notasIdealea.add(NotaIdeal);
+                    materias.get(i).listaEstudiantes.get(i).notas.add(notaAsignar);
+                    materias.get(i).listaEstudiantes.get(i).notasIdealea.add(NotaIdeal);
                 }
             }
 
