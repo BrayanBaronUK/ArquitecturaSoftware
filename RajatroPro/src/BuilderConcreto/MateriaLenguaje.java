@@ -30,7 +30,7 @@ public class MateriaLenguaje extends MateriaBuilder{
 
     @Override
     public void nombre() {
-        System.out.println("ingles");
+        materia.toString();
     }
     
 }

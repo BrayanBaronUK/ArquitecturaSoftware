@@ -14,7 +14,7 @@ import java.util.ArrayList;
 public class Materia {
 
     double totalPorcentaje;
-    String nombre;
+    protected String nombre;
     ArrayList<Estudiante> listaEstudiantes = new ArrayList<>();
     ArrayList<Criterio> listaCriterios = new ArrayList<>();
     
@@ -25,7 +25,6 @@ public class Materia {
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-    
 
     public void setTotalPorcentaje(double totalPorcentaje) {
         this.totalPorcentaje = totalPorcentaje;
@@ -37,6 +36,11 @@ public class Materia {
 
     public void setListaCriterios(ArrayList<Criterio> listaCriterios) {
         this.listaCriterios = listaCriterios;
+    }
+
+    @Override
+    public String toString() {
+        return "Materia{" + "nombre=" + nombre + '}';
     }
     
 

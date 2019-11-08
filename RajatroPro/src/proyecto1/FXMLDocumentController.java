@@ -5,6 +5,9 @@
  */
 package proyecto1;
 
+import BuilderConcreto.MateriaHistoria;
+import BuilderConcreto.MateriaLenguaje;
+import BuilderConcreto.MateriaRazonamiento;
 import Excepciones.materiaNoExisteException;
 import FachadaModulos.FachadaModulos;
 import java.net.URL;
@@ -78,8 +81,23 @@ public class FXMLDocumentController implements Initializable {
 
     @FXML
     private void AgregarCurso(ActionEvent event) {
-        fregistro.fachadaregistro.crearMateria(Curso.getText());
        // registro.crearMateria(Curso.getText());
+        switch(Curso.getText().trim()){
+            case "Español":{
+                fregistro.fachadaregistro.crearMateria(new MateriaLenguaje(), Curso.getText().trim());
+                break;
+            }
+            case "Matematicas":{
+                fregistro.fachadaregistro.crearMateria(new MateriaRazonamiento(), Curso.getText().trim());
+                break;
+            }
+            case "Sociales":{
+                fregistro.fachadaregistro.crearMateria(new MateriaHistoria(), Curso.getText().trim());
+            }
+            default:{
+                System.out.println("fallo");
+            }
+        }
         AreaCursos.setText(AreaCursos.getText() + "\n" + Curso.getText());
         Curso.clear();
     }

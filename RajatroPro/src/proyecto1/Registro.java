@@ -34,9 +34,12 @@ public class Registro {
 
     
 
-    public void crearMateria(String curso) {
-        materia = new Materia();
-        materias.add(materia);
+    public void crearMateria(MateriaBuilder a, String texto) {
+        //materia = new Materia();
+        MateriaBuilder callMateria = a;
+        nuevaMateria.setMateriaBuilder(callMateria);
+        nuevaMateria.ConstruirMateria(texto);
+        materias.add(nuevaMateria.getMateria());
     }
 
     public void crearEstudiante(String MateriaEstudiante, String NombreAgregar) throws materiaNoExisteException {
@@ -48,12 +51,12 @@ public class Registro {
         }
         if (contador > 0) {
             estudiante = new Estudiante(NombreAgregar);
-            materia.listaEstudiantes.add(estudiante);
+            materias.get(contador - 1).listaEstudiantes.add(estudiante);
         }
         if (contador == 0) {
             throw new materiaNoExisteException(MateriaEstudiante);
         }
-
+        
     }
 
    public void agregarElemento(String NombreElemento, String MateriaElemento, double Porcentaje) throws materiaNoExisteException {

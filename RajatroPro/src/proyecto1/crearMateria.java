@@ -23,16 +23,14 @@ public class crearMateria {
         this.materiaBuilder = mb;
     }
     
-    public void ConstruirMateria(){
-        
+    
+    public void ConstruirMateria(String materia){
         materiaBuilder.crearNuevaMateria();
-        materiaBuilder.porcentajeMateria();
-        materiaBuilder.listaCriterios();
-        materiaBuilder.listaEstudiantes();
-        materiaBuilder.nombre();
-        
-        
-        
+        materiaBuilder.getMateria().nombre = materia;
+        //materiaBuilder.porcentajeMateria();
+        //materiaBuilder.listaCriterios();
+        //materiaBuilder.listaEstudiantes();
+        materiaBuilder.nombre();    
     
     }
     
