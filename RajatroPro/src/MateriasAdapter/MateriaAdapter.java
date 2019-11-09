@@ -7,7 +7,7 @@ package MateriasAdapter;
 
 /**
  *
- * @author 10 Spring Creators
+ * @author Brayan
  */
 public abstract class MateriaAdapter {
 

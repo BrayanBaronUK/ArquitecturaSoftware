@@ -7,7 +7,7 @@ package proyecto1;
 
 /**
  *
- * @author 10 Spring Creators
+ * @author Brayan
  */
 public abstract class MateriaBuilder {
     

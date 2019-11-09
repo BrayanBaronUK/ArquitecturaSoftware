@@ -8,7 +8,7 @@ import BuilderConcreto.MateriaEspañol;
 
 /**
  *
- * @author 10 Spring Creators
+ * @author Brayan
  */
 public class MateriaEspañolAdapter extends MateriaAdapter {
     

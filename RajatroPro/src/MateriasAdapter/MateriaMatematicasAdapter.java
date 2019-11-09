@@ -9,7 +9,7 @@ import BuilderConcreto.MateriaMatematicas;
 
 /**
  *
- * @author 10 Spring Creators
+ * @author Brayan
  */
 public class MateriaMatematicasAdapter extends MateriaAdapter{
 

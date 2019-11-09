@@ -9,7 +9,7 @@ import BuilderConcreto.MateriaSociales;
 
 /**
  *
- * @author 10 Spring Creators
+ * @author Brayan
  */
 public class MateriaSocialesAdapter extends MateriaAdapter{
     

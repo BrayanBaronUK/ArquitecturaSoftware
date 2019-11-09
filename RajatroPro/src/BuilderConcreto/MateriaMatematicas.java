@@ -10,7 +10,7 @@ import proyecto1.MateriaBuilder;
 
 /**
  *
- * @author 10 Spring Creators
+ * @author Brayan
  */
 public class MateriaMatematicas extends MateriaBuilder{
     

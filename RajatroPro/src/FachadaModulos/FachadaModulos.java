@@ -10,7 +10,7 @@ import proyecto1.Registro;
 
 /**
  *
- * @author 10 Spring Creators
+ * @author Brayan
  */
 public class FachadaModulos {
     
