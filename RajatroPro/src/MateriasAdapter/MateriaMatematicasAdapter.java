@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package MateriaAdapter;
+package MateriasAdapter;
+
+import BuilderConcreto.MateriaMatematicas;
 
 /**
  *
@@ -11,9 +13,13 @@ package MateriaAdapter;
  */
 public class MateriaMatematicasAdapter extends MateriaAdapter{
 
+   final MateriaMatematicas matematicas  = new MateriaMatematicas();
+
     @Override
     public void creacionAdapter() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        matematicas.nombre();
+        matematicas.listaCriterios();
+        matematicas.listaEstudiantes();
+        matematicas.porcentajeMateria();
     }
-    
 }

@@ -10,6 +10,7 @@ import BuilderConcreto.MateriaEspañol;
 import BuilderConcreto.MateriaMatematicas;
 import Excepciones.materiaNoExisteException;
 import FachadaModulos.FachadaModulos;
+import MateriasAdapter.MateriaEspañolAdapter;
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
@@ -85,6 +86,7 @@ public class FXMLDocumentController implements Initializable {
         switch(Curso.getText().trim()){
             case "Español":{
                 fregistro.fachadaregistro.crearMateria(new MateriaEspañol(), Curso.getText().trim());
+             //   fregistro.fachadaregistro.crearMateria(new MateriaEspañolAdapter()., Curso.getText().trim());
                 break;
             }
             case "Matematicas":{

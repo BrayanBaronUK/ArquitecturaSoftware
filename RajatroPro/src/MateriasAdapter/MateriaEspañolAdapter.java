@@ -3,13 +3,14 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package MateriaAdapter;
+package MateriasAdapter;
 import BuilderConcreto.MateriaEspañol;
+
 /**
  *
  * @author 10 Spring Creators
  */
-public class MateriaEspañolAdapter extends MateriaAdapter{
+public class MateriaEspañolAdapter extends MateriaAdapter {
     
     final MateriaEspañol español = new MateriaEspañol();
 
