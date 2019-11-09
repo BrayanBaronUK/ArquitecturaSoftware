@@ -18,6 +18,7 @@ public class MateriaRazonamiento extends MateriaBuilder{
             
      @Override
     public void nombre() {
+        System.out.println("Matematicas");
           materia.toString();
     }
     
@@ -29,12 +30,12 @@ public class MateriaRazonamiento extends MateriaBuilder{
 
     @Override
     public void listaEstudiantes() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       System.out.println("estudiantes");
     }
 
     @Override
     public void listaCriterios() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       System.out.println("criterios");
     }
 
    

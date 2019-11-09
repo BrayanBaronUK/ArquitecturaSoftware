@@ -16,21 +16,22 @@ public class MateriaHistoria extends MateriaBuilder{
 
     @Override
     public void porcentajeMateria() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Porcentaje");
     }
 
     @Override
     public void listaEstudiantes() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+        System.out.println("Estudiantes");
     }
 
     @Override
     public void listaCriterios() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       System.out.println("criterios");
     }
 
     @Override
     public void nombre() {
+        System.out.println("Sociales");
          materia.toString();
     }
     
