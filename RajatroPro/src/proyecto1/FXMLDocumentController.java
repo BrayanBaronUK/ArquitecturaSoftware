@@ -5,9 +5,9 @@
  */
 package proyecto1;
 
-import BuilderConcreto.MateriaHistoria;
-import BuilderConcreto.MateriaLenguaje;
-import BuilderConcreto.MateriaRazonamiento;
+import BuilderConcreto.MateriaSociales;
+import BuilderConcreto.MateriaEspañol;
+import BuilderConcreto.MateriaMatematicas;
 import Excepciones.materiaNoExisteException;
 import FachadaModulos.FachadaModulos;
 import java.net.URL;
@@ -84,15 +84,15 @@ public class FXMLDocumentController implements Initializable {
        // registro.crearMateria(Curso.getText());
         switch(Curso.getText().trim()){
             case "Español":{
-                fregistro.fachadaregistro.crearMateria(new MateriaLenguaje(), Curso.getText().trim());
+                fregistro.fachadaregistro.crearMateria(new MateriaEspañol(), Curso.getText().trim());
                 break;
             }
             case "Matematicas":{
-                fregistro.fachadaregistro.crearMateria(new MateriaRazonamiento(), Curso.getText().trim());
+                fregistro.fachadaregistro.crearMateria(new MateriaMatematicas(), Curso.getText().trim());
                 break;
             }
             case "Sociales":{
-                fregistro.fachadaregistro.crearMateria(new MateriaHistoria(), Curso.getText().trim());
+                fregistro.fachadaregistro.crearMateria(new MateriaSociales(), Curso.getText().trim());
                 break;
             }
             default:{

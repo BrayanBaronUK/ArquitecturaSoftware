@@ -12,25 +12,16 @@ import proyecto1.MateriaBuilder;
  *
  * @author 10 Spring Creators
  */
-public class MateriaRazonamiento extends MateriaBuilder{
-    
-            
-            
-     @Override
-    public void nombre() {
-        System.out.println("Matematicas");
-          materia.toString();
-    }
-    
+public class MateriaSociales extends MateriaBuilder{
 
     @Override
     public void porcentajeMateria() {
-        System.out.println("porcentaje");
+        System.out.println("Porcentaje");
     }
 
     @Override
     public void listaEstudiantes() {
-       System.out.println("estudiantes");
+        System.out.println("Estudiantes");
     }
 
     @Override
@@ -38,8 +29,10 @@ public class MateriaRazonamiento extends MateriaBuilder{
        System.out.println("criterios");
     }
 
-   
-    
-    
+    @Override
+    public void nombre() {
+        System.out.println("Sociales");
+         materia.toString();
+    }
     
 }

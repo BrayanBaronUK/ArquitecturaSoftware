@@ -5,18 +5,17 @@
  */
 package BuilderConcreto;
 
-import proyecto1.Materia;
 import proyecto1.MateriaBuilder;
 
 /**
  *
  * @author 10 Spring Creators
  */
-public class MateriaHistoria extends MateriaBuilder{
+public class MateriaEspañol extends MateriaBuilder{
 
     @Override
     public void porcentajeMateria() {
-        System.out.println("Porcentaje");
+       System.out.println("porcentaje");
     }
 
     @Override
@@ -26,13 +25,13 @@ public class MateriaHistoria extends MateriaBuilder{
 
     @Override
     public void listaCriterios() {
-       System.out.println("criterios");
+        System.out.println("Criterios");
     }
 
     @Override
     public void nombre() {
-        System.out.println("Sociales");
-         materia.toString();
+        System.out.println("Español");
+        materia.toString();
     }
     
 }
